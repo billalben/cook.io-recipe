@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,12 +28,61 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0"
     />
     <!--! Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!--! Custom JS -->
     <script src="./assets/js/global.js" type="module"></script>
     <script src="./assets/js/home.js" type="module"></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <!-- ? === Header === -->
+    <header class="header" data-header>
+      <a href="/" class="logo">
+        <img
+          src="./assets/images/logo-light.svg"
+          width="156"
+          height="32"
+          alt="Cook.io"
+          class="logo-light"
+        />
+        <img
+          src="./assets/images/logo-dark.svg"
+          width="156"
+          height="32"
+          alt="Cook.io"
+          class="logo-dark"
+        />
+      </a>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a href="/" class="navbar-link title-small has-state active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./recipes.html" class="navbar-link title-small has-state">
+              Recipes
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        class="icon-btn theme-switch has-state"
+        aria-pressed="false"
+        aria-label="Toggle light and dark theme"
+        data-theme-btn
+      >
+        <span class="material-symbols-outlined light-icon" aria-hidden="true">
+          light_mode
+        </span>
+        <span class="material-symbols-outlined dark-icon" aria-hidden="true">
+          dark_mode
+        </span>
+      </button>
+      <a href="./saved-recipes.html" class="btn btn-primary has-icon">
+        <span class="material-symbols-outlined" aria-hidden="true">book</span>
+        <span class="span">Saved Recipes</span>
+      </a>
+    </header>
   </body>
 </html>
