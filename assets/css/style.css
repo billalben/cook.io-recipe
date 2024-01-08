@@ -319,6 +319,9 @@ main {
   height: 100%;
   object-fit: cover;
 }
+.section-title {
+  margin-block-end: 12px;
+}
 
 /* ?=== COMPONENTS  === */
 /* * Mobile nav */
@@ -706,6 +709,46 @@ main {
 }
 
 /* ?=== #RECIPE SLIDER === */
+.slider {
+  --gap: 8px;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 5px;
+}
+.slider::-webkit-scrollbar {height: 4px;}
+.slider::-webkit-scrollbar-thumb {background-color: transparent;}
+.slider:where(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--alpha-10);
+}
+.slider-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: var(--gap);
+  transition: var(--transition-medium);
+  -webkit-transition: var(--transition-medium);
+  -moz-transition: var(--transition-medium);
+  -ms-transition: var(--transition-medium);
+  -o-transition: var(--transition-medium);
+}
+.slider-item {
+  min-width: calc(50% - 4px);
+  scroll-snap-align: start;
+}
+.load-more-card {
+  height: 100%;
+  background-color: var(--primary-container);
+  border: 1px solid var(--outline);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--radius-4);
+  -webkit-border-radius: var(--radius-4);
+  -moz-border-radius: var(--radius-4);
+  -ms-border-radius: var(--radius-4);
+  -o-border-radius: var(--radius-4);
+}
 
 /* ?=== #TAG === */
 
