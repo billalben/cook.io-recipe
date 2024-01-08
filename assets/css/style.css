@@ -786,6 +786,24 @@ main {
 }
 
 /* ?=== #FOOTER === */
+.footer .logo {
+  display: none;
+}
+.footer {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 12px;
+  border-block-start: 1px solid var(--outline);
+}
+.copyright {
+  opacity: 0.8;
+}
+.footer .edamam img {
+  width: 180px;
+}
 
 /* ?=== #FILTER BAR === */
 
