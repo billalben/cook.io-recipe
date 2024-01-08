@@ -579,6 +579,20 @@ main {
 }
 
 /* * badge button */
+.badge-btn {
+  height: 40px;
+  max-width: max-content;
+  background-color: var(--badge-btn);
+  color: var(--on-badge-btn);
+  padding-inline: 16px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-pill);
+  -webkit-border-radius: var(--radius-pill);
+  -moz-border-radius: var(--radius-pill);
+  -ms-border-radius: var(--radius-pill);
+  -o-border-radius: var(--radius-pill);
+}
 
 /* * filter button */
 
@@ -716,8 +730,12 @@ main {
   scroll-snap-type: inline mandatory;
   padding-block-end: 5px;
 }
-.slider::-webkit-scrollbar {height: 4px;}
-.slider::-webkit-scrollbar-thumb {background-color: transparent;}
+.slider::-webkit-scrollbar {
+  height: 4px;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
 .slider:where(:hover, :focus-within)::-webkit-scrollbar-thumb {
   background-color: var(--alpha-10);
 }
@@ -751,6 +769,21 @@ main {
 }
 
 /* ?=== #TAG === */
+.tag {
+  text-align: center;
+}
+.tag .section-text {
+  max-width: 50ch;
+  margin-inline: auto;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-block-start: 24px;
+}
 
 /* ?=== #FOOTER === */
 
