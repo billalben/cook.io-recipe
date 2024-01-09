@@ -25,7 +25,7 @@ export const fetchData = async function (queries, successCallback) {
   const response = await fetch(url);
 
   if (response.ok) {
-    const data = response.json();
+    const data = await response.json();
     successCallback(data);
   }
 };
