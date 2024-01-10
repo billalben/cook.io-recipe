@@ -1,5 +1,7 @@
 "use strict";
 
+import { fetchData } from "./api.js";
+
 /**
  * Add Events On Multiple Elements
  * @param {NodeList} $elements NodeList
@@ -27,3 +29,26 @@ export const $skeletonCard = `
       <div class="skeleton card-text"></div>
     </div>
   </div>`;
+
+const ROOT = "https://api.edamam.com/api/recipes/v2";
+
+window.saveRecipe = function (element, recipeId) {
+  const isSaved = window.localStorage.getItem(`cookio-recipe${recipeId}`);
+  ACCESS_POINT = `${ROOT}/${recipeId}`;
+
+  if (!isSaved) {
+    fetchData(cardQueries, function (data) {
+      window.localStorage.setItem(
+        `cookio-recipe${recipeId}`,
+        JSON.stringify(data)
+      );
+      element.classList.toggle("saved");
+      element.classList.toggle("removed");
+    });
+    ACCESS_POINT = ROOT;
+  } else {
+    window.localStorage.removeItem(`cookio-recipe${recipeId}`);
+    element.classList.toggle("saved");
+    element.classList.toggle("removed");
+  }
+};
