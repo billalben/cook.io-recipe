@@ -128,9 +128,9 @@
             <span class="material-symbols-outlined" aria-hidden="true">
               filter_list
             </span>
-            <p class="title-wrapper">Filters</p>
+            <p class="title-medium">Filters</p>
             <button
-              class="close-btn has-state"
+              class="icon-btn close-btn has-state"
               aria-label="Close filter bar"
               data-filter-toggler
             >
@@ -141,7 +141,7 @@
           </div>
           <div class="filter-content">
             <div class="search-wrapper">
-              <div class="input-outline">
+              <div class="input-outlined">
                 <label for="search" class="body-large label"> Search </label>
                 <input
                   type="search"
@@ -174,7 +174,7 @@
               <div class="accordion-content" id="cook-time">
                 <div class="accordion-overflow" data-filter="time">
                   <label class="filter-chip label-large">
-                    &lt; 5 ingredients
+                    &lt; 5 minutes
                     <input
                       type="radio"
                       name="cook-time"
@@ -527,8 +527,8 @@
                   expand_more
                 </span>
               </button>
-              <div class="accordion-content" id="diet">
-                <div class="accordion-overflow" data-filter="diet">
+              <div class="accordion-content" id="health">
+                <div class="accordion-overflow" data-filter="health">
                   <label class="filter-chip label-large">
                     Alcohol Cocktail
                     <input
@@ -985,7 +985,7 @@
                   expand_more
                 </span>
               </button>
-              <div class="accordion-content" id="meal">
+              <div class="accordion-content" id="dish">
                 <div class="accordion-overflow" data-filter="dishType">
                   <label class="filter-chip label-large">
                     Biscuits and cookies
@@ -1369,6 +1369,35 @@
             >
               Apply
             </button>
+          </div>
+        </div>
+
+        <div class="overlay" data-overlay data-filter-toggler></div>
+
+        <div class="recipe-container container">
+          <div class="title-wrapper">
+            <h2 class="headline-small">All Recipes</h2>
+            <button
+              class="btn btn-secondary btn-filter has-icon has-state"
+              aria-label="Open filter bar"
+              data-filter-toggler
+              data-filter-btn
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">
+                filter_list
+              </span>
+              <div class="wrapper">
+                <span class="label-large">Filters</span>
+                <div class="badge label-small" data-filter-count>9</div>
+              </div>
+            </button>
+          </div>
+          <div class="grid-list" data-grid-list></div>
+          <div class="load-more grid-list" data-load-more>
+            <p class="body-medium info-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam,
+              pariatur quo maiores.
+            </p>
           </div>
         </div>
       </article>
