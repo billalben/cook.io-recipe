@@ -1257,5 +1257,11 @@ main {
 }
 
 /* ?=== #SAVED RECIPE PAGE === */
+.saved-recipe-page {
+  padding-block-end: 24px;
+}
+.saved-recipe-page .section-title {
+  line-height: 40px;
+}
 
 /* #MEDIA QUERIES */
