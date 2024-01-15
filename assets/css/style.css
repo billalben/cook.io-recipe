@@ -303,7 +303,7 @@ main {
 }
 .grid-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 12px 8px;
 }
 .img-holder {
@@ -1265,3 +1265,102 @@ main {
 }
 
 /* #MEDIA QUERIES */
+/* Responsive for larger than 600px screen */
+@media (min-width: 600px) {
+  /* ?=== #CUSTOM PROPERTY === */
+  :root {
+    --fs-display-large: 3.6rem;
+    --fs-display-medium: 3.6rem;
+    --fs-display-small: 3rem;
+  }
+
+  /* ?=== #TYPOGRAPHY === */
+  .display-large,
+  .display-medium {
+    line-height: 44px;
+  }
+  .display-small {
+    line-height: 36px;
+  }
+  .title-small {
+    font-size: 1.6rem;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+
+  /* ?=== #REUSED STYLE === */
+  .container {
+    padding-inline: 32px;
+  }
+  .grid-list {
+    grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  }
+  .section-title {
+    margin-block-end: 24px;
+  }
+  .snackbar-container {
+    right: auto;
+    bottom: 32px;
+    left: 32px;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  /* ?=== #HERO === */
+  .banner-card {
+    background-image: url("../images/hero-banner-medium.jpg");
+  }
+  .search-field {
+    height: 68px;
+  }
+  .search-wrapper .search-submit {
+    width: 80px;
+  }
+  .hero .search-wrapper {
+    margin-block: 24px 16px;
+  }
+
+  /* ?=== #TAB === */
+  .tab .tab-list {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+  .tab .btn-secondary {
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
+  /* ?=== #RECIPE SLIDER === */
+  .slider-item {
+    min-width: 206px;
+  }
+
+  /* ?=== #TAG === */
+  .tag .section-title {
+    margin-block-end: 12px;
+  }
+
+  /* ?=== #FOOTER === */
+  .footer {
+    justify-content: space-between;
+    padding-inline: 32px;
+  }
+
+  /* ?=== #FILTER BAR === */
+  .filter-bar {
+    border-radius: var(--radius-8) 0 0 var(--radius-8);
+    -webkit-border-radius: var(--radius-8) 0 0 var(--radius-8);
+    -moz-border-radius: var(--radius-8) 0 0 var(--radius-8);
+    -ms-border-radius: var(--radius-8) 0 0 var(--radius-8);
+    -o-border-radius: var(--radius-8) 0 0 var(--radius-8);
+  }
+
+  /* ?=== #DETAIL PAGE === */
+  .detail-banner {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .detail-stats .stats-item {
+    padding-block: 20px;
+  }
+}
