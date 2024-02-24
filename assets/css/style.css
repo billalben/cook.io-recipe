@@ -954,6 +954,9 @@ main {
 .copyright {
   opacity: 0.8;
 }
+.current-yr-cp {
+  display: inline-block;
+}
 .footer .edamam img {
   width: 180px;
 }

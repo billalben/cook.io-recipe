@@ -248,3 +248,6 @@ for (const [index, $sliderSection] of $sliderSections.entries()) {
     }
   );
 }
+
+// dynamic year copyright
+document.querySelector(".current-yr-cp").textContent = new Date().getFullYear();
