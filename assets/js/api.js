@@ -1,9 +1,8 @@
 "use strict";
 
-window.ACCESS_POINT = "https://api.edamam.com/api/recipes/v2";
-const APP_ID = "d9170f66";
-const API_KEY = "363e4ed102e0231077d7a3e1f562155d";
-const TYPE = "public";
+// window.ACCESS_POINT = "https://api.edamam.com/api/recipes/v2";
+// window.ACCESS_POINT = "localhost:3000/recipe";
+window.ACCESS_POINT = "https://my-proxy-server-da7c.onrender.com/recipe";
 
 /**
  *
@@ -18,9 +17,7 @@ export const fetchData = async function (queries, successCallback) {
     .replace(/ /g, "20%")
     .replace(/\+/g, "2B%");
 
-  const url = `${ACCESS_POINT}?app_id=${APP_ID}&app_key=${API_KEY}&type=${TYPE}${
-    query ? `&${query}` : ""
-  }`;
+  const url = `${ACCESS_POINT}?${query ? `&${query}` : ""}`;
 
   const response = await fetch(url);
 
