@@ -30,7 +30,8 @@ export const $skeletonCard = `
     </div>
   </div>`;
 
-const ROOT = "https://api.edamam.com/api/recipes/v2";
+// const ROOT = "https://api.edamam.com/api/recipes/v2";
+const ROOT = "https://my-proxy-server-da7c.onrender.com/recipe";
 
 window.saveRecipe = function (element, recipeId) {
   const isSaved = window.localStorage.getItem(`cookio-recipe${recipeId}`);
