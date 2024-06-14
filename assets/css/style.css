@@ -651,12 +651,12 @@ main {
   -o-transition: var(--transition-short);
 }
 .input-field:focus::placeholder {
-  opacity: 1;
+  opacity: 0.7;
 }
 .input-outlined .label {
   position: absolute;
   left: 16px;
-  opacity: 0.75;
+  opacity: 0.7;
   background-color: var(--background);
   padding-inline: 4px;
   margin-inline: -4px;
@@ -667,7 +667,8 @@ main {
   -ms-transition: var(--transition-short);
   -o-transition: var(--transition-short);
 }
-.input-outlined:has(:focus, .input:not(:placeholder-shown)) .label {
+.input-outlined:has(:focus, input:not(:placeholder-shown)) .label,
+.input-field:not(:placeholder-shown) ~ .label {
   opacity: 1;
   color: var(--primary);
   transform-origin: left center;
@@ -973,6 +974,7 @@ main {
   max-width: 400px;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   transition: var(--transition-short);

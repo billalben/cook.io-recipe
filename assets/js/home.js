@@ -11,8 +11,9 @@ const $searchField = document.querySelector("[data-search-field]");
 const $searchBtn = document.querySelector("[data-search-btn]");
 
 $searchBtn.addEventListener("click", function () {
-  if ($searchField.value.trim())
+  if ($searchField.value.trim()) {
     window.location = `/recipes.html?q=${$searchField.value.trim()}`;
+  }
 });
 
 $searchField.addEventListener("keydown", (e) => {
@@ -215,7 +216,9 @@ for (const [index, $sliderSection] of $sliderSections.entries()) {
               <div class="meta-wrapper">
                 <div class="meta-item">
                   <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-                  <span class="label-medium">${getTime(cookingTime).time || "<1"} 
+                  <span class="label-medium">${
+                    getTime(cookingTime).time || "<1"
+                  } 
                     ${getTime(cookingTime).timeUnit}</span>
                 </div>
                 <button class="icon-btn has-state ${
